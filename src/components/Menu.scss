@@ -1,0 +1,83 @@
+
+
+.menu
+{
+    $menu-item-background-color: rgb(65, 112, 183);
+    $menu-item-background-highlight-color: hsl(216, 48%, 60%);
+    $menu-item-border-color: black;
+    $menu-item-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 6px;
+
+    list-style: none;
+    padding: 6px;
+    margin: 0;
+
+    .menu-item
+    {
+        padding: 3px 10px;
+
+        a
+        {
+            text-decoration: none;
+            color: initial;
+            
+            text-decoration: none;
+        }
+    }
+
+    &.is-style-button
+    {
+        .menu-item
+        {
+            border-width: 1px;
+            border-color: $menu-item-border-color;
+            border-style: solid;
+            border-radius: $menu-item-radius;
+            
+            background-color: $menu-item-background-color;
+
+            &:hover
+            {
+                background-color: $menu-item-background-highlight-color;
+            }
+        }
+    }
+
+    &.is-style-outline
+    {
+        .menu-item
+        {
+            border-width: 1px;
+            border-color: $menu-item-border-color;
+            border-style: solid;
+            border-radius: $menu-item-radius;
+
+            &:hover
+            {
+                background-color: $menu-item-background-highlight-color;
+            }
+        }
+    }
+
+    &.is-style-text
+    {
+        .menu-item
+        {
+            opacity: 0.8;
+
+            &:hover
+            {
+                opacity: 1;
+            }
+            
+            a:hover
+            {
+                text-decoration: underline;
+            }
+        }
+    }
+}
